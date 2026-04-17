@@ -37,8 +37,11 @@ end half_adder_tb;
 
 architecture Behavioral of half_adder_tb is
 
+type adder_type is (Half_Adder);
+signal adder : adder_type;
+
 signal A_tb , B_tb : STD_LOGIC := '0';
-signal SUM_tb, CARRY_tb : STD_LOGIC := '0';
+signal SUM_HA_tb, CARRY_HA_tb : STD_LOGIC := '0';
 
 begin
 
@@ -46,12 +49,14 @@ uut: entity work.half_adder
 Port map (
             A => A_tb,
             B => B_tb,
-            SUM => SUM_tb,
-            CARRY => CARRY_tb
+            SUM_HA => SUM_HA_tb,
+            CARRY_HA => CARRY_HA_tb
             );
             
 process
 begin
+
+adder <= Half_Adder;
 
 A_tb <= '0'; B_tb <= '0'; wait for 10 ns;
 
@@ -61,7 +66,7 @@ A_tb <= '1'; B_tb <= '0'; wait for 10 ns;
 
 A_tb <= '1'; B_tb <= '1'; wait for 10 ns;
 
-
+A_tb <= 'X'; B_tb <= 'X'; wait;
        
 
 end process;

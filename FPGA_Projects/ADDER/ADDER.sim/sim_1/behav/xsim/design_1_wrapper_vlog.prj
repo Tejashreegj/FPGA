@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../ADDER.srcs/sources_1/bd/design_1/ipshared/4903" \
+"../../../../ADDER.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
+"../../../../ADDER.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+"../../../../ADDER.ip_user_files/bd/design_1/ip/design_1_ila_0_0/sim/design_1_ila_0_0.v" \
+"../../../../ADDER.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../ADDER.ip_user_files/bd/design_1/ip/design_1_half_adder_0_0/sim/design_1_half_adder_0_0.v" \
+"../../../../ADDER.ip_user_files/bd/design_1/ip/design_1_full_adder_0_0/sim/design_1_full_adder_0_0.v" \
+"../../../../ADDER.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

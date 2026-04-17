@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# adder
+# full_adder, half_adder
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -169,18 +169,14 @@ proc create_root_design { parentCell } {
    ] $sys_diff_clock
 
   # Create ports
+  set A_0 [ create_bd_port -dir I A_0 ]
+  set B_0 [ create_bd_port -dir I B_0 ]
+  set CARRY_FA_0 [ create_bd_port -dir O CARRY_FA_0 ]
+  set CARRY_HA_0 [ create_bd_port -dir O CARRY_HA_0 ]
+  set Cin_0 [ create_bd_port -dir I Cin_0 ]
+  set SUM_FA_0 [ create_bd_port -dir O SUM_FA_0 ]
+  set SUM_HA_0 [ create_bd_port -dir O SUM_HA_0 ]
 
-  # Create instance: adder_0, and set properties
-  set block_name adder
-  set block_cell_name adder_0
-  if { [catch {set adder_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $adder_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
@@ -198,6 +194,28 @@ proc create_root_design { parentCell } {
    CONFIG.USE_RESET {false} \
  ] $clk_wiz_0
 
+  # Create instance: full_adder_0, and set properties
+  set block_name full_adder
+  set block_cell_name full_adder_0
+  if { [catch {set full_adder_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $full_adder_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: half_adder_0, and set properties
+  set block_name half_adder
+  set block_cell_name half_adder_0
+  if { [catch {set half_adder_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $half_adder_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: ila_0, and set properties
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
   set_property -dict [ list \
@@ -206,26 +224,18 @@ proc create_root_design { parentCell } {
    CONFIG.C_NUM_OF_PROBES {7} \
  ] $ila_0
 
-  # Create instance: vio_0, and set properties
-  set vio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0 ]
-  set_property -dict [ list \
-   CONFIG.C_EN_PROBE_IN_ACTIVITY {0} \
-   CONFIG.C_NUM_PROBE_IN {0} \
-   CONFIG.C_NUM_PROBE_OUT {3} \
- ] $vio_0
-
   # Create interface connections
   connect_bd_intf_net -intf_net sys_diff_clock_1 [get_bd_intf_ports sys_diff_clock] [get_bd_intf_pins clk_wiz_0/CLK_IN1_D]
 
   # Create port connections
-  connect_bd_net -net adder_0_CARRY_FA [get_bd_pins adder_0/CARRY_FA] [get_bd_pins ila_0/probe6]
-  connect_bd_net -net adder_0_CARRY_HA [get_bd_pins adder_0/CARRY_HA] [get_bd_pins ila_0/probe4]
-  connect_bd_net -net adder_0_SUM_FA [get_bd_pins adder_0/SUM_FA] [get_bd_pins ila_0/probe5]
-  connect_bd_net -net adder_0_SUM_HA [get_bd_pins adder_0/SUM_HA] [get_bd_pins ila_0/probe3]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins ila_0/clk] [get_bd_pins vio_0/clk]
-  connect_bd_net -net vio_0_probe_out0 [get_bd_pins adder_0/A] [get_bd_pins ila_0/probe0] [get_bd_pins vio_0/probe_out0]
-  connect_bd_net -net vio_0_probe_out1 [get_bd_pins adder_0/B] [get_bd_pins ila_0/probe1] [get_bd_pins vio_0/probe_out1]
-  connect_bd_net -net vio_0_probe_out2 [get_bd_pins adder_0/Cin] [get_bd_pins ila_0/probe2] [get_bd_pins vio_0/probe_out2]
+  connect_bd_net -net A_0_1 [get_bd_ports A_0] [get_bd_pins full_adder_0/A] [get_bd_pins half_adder_0/A] [get_bd_pins ila_0/probe0]
+  connect_bd_net -net B_0_1 [get_bd_ports B_0] [get_bd_pins full_adder_0/B] [get_bd_pins half_adder_0/B] [get_bd_pins ila_0/probe1]
+  connect_bd_net -net Cin_0_1 [get_bd_ports Cin_0] [get_bd_pins full_adder_0/Cin] [get_bd_pins ila_0/probe2]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins ila_0/clk]
+  connect_bd_net -net full_adder_0_CARRY_FA [get_bd_ports CARRY_FA_0] [get_bd_pins full_adder_0/CARRY_FA] [get_bd_pins ila_0/probe6]
+  connect_bd_net -net full_adder_0_SUM_FA [get_bd_ports SUM_FA_0] [get_bd_pins full_adder_0/SUM_FA] [get_bd_pins ila_0/probe5]
+  connect_bd_net -net half_adder_0_CARRY_HA [get_bd_ports CARRY_HA_0] [get_bd_pins half_adder_0/CARRY_HA] [get_bd_pins ila_0/probe4]
+  connect_bd_net -net half_adder_0_SUM_HA [get_bd_ports SUM_HA_0] [get_bd_pins half_adder_0/SUM_HA] [get_bd_pins ila_0/probe3]
 
   # Create address segments
 

@@ -37,8 +37,11 @@ end full_adder_tb;
 
 architecture Behavioral of full_adder_tb is
 
+type adder_type is (Full_Adder);
+signal adder : adder_type;
+
 signal A_tb, B_tb, Cin_tb : STD_LOGIC :='0';
-signal SUM_tb, CARRY_tb : STD_LOGIC := '0';
+signal SUM_FA_tb, CARRY_FA_tb : STD_LOGIC := '0';
 
 begin
 
@@ -47,12 +50,14 @@ Port map (
             A => A_tb,
             B => B_tb,
             Cin => Cin_tb,
-            SUM => SUM_tb,
-            CARRY => CARRY_tb
+            SUM_FA => SUM_FA_tb,
+            CARRY_FA => CARRY_FA_tb
             );
             
 process
 begin
+
+adder <= Full_Adder;
 
 A_tb <= '0'; B_tb <= '0'; Cin_tb <='0'; wait for 10 ns;
 A_tb <= '0'; B_tb <= '0'; Cin_tb <='1'; wait for 10 ns;
@@ -62,6 +67,7 @@ A_tb <= '1'; B_tb <= '0'; Cin_tb <='0'; wait for 10 ns;
 A_tb <= '1'; B_tb <= '0'; Cin_tb <='1'; wait for 10 ns;
 A_tb <= '1'; B_tb <= '1'; Cin_tb <='0'; wait for 10 ns;
 A_tb <= '1'; B_tb <= '1'; Cin_tb <='1'; wait for 10 ns;
+A_tb <= 'X'; B_tb <= 'X'; Cin_tb <='X'; wait;
 
 end process;
 end Behavioral;

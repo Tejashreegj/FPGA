@@ -35,16 +35,21 @@ entity half_adder is
   Port (
             A : in std_logic;
             B : in std_logic;
-            SUM : out std_logic;
-            CARRY : out std_logic
+            SUM_HA : out std_logic;
+            CARRY_HA : out std_logic
    );
 end half_adder;
 
 architecture Behavioral of half_adder is
 
+type adder_type is (Half_Adder);
+signal adder : adder_type;
+
 begin
 
-SUM <= A xor B;
-CARRY <= A and B;
+adder <= Half_Adder;
+
+SUM_HA <= A xor B;
+CARRY_HA <= A and B;
 
 end Behavioral;

@@ -35,16 +35,21 @@ entity full_adder is
   Port (    A : in std_logic;
             B : in std_logic;
             Cin : in std_logic;
-            SUM : out std_logic;
-            CARRY : out std_logic 
+            SUM_FA : out std_logic;
+            CARRY_FA : out std_logic 
   );
 end full_adder;
 
 architecture Behavioral of full_adder is
 
+type adder_type is (Full_Adder);
+signal adder : adder_type;
+
 begin
 
-SUM <= A xor B xor Cin;
-CARRY <= (A and B) or (B and Cin) or (A and Cin);
+adder <= Full_Adder;
+
+SUM_FA <= A xor B xor Cin;
+CARRY_FA <= (A and B) or (B and Cin) or (A and Cin);
 
 end Behavioral;
