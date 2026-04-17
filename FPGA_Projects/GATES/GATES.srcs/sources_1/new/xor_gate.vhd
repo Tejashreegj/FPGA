@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity xor_gate is
   Port (    A : in std_logic;
             B : in std_logic;
-            Y : out std_logic
+            Y_xor : out std_logic
   );
 end xor_gate;
 
@@ -46,6 +46,6 @@ signal operation : op_type;
 begin
 
 operation <= XOR_OP;
-Y <= A xor B;
+Y_xor <= A xor B;
 
 end Behavioral;

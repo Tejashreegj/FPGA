@@ -2,12 +2,12 @@
 # Webtalk v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Fri Apr 17 15:31:35 2026
-# Process ID: 18292
+# Start of session at: Fri Apr 17 16:14:45 2026
+# Process ID: 2696
 # Current directory: C:/GITDEMO/FPGA_Projects/GATES/GATES.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/GITDEMO/FPGA_Projects/GATES/GATES.sim/sim_1/behav/xsim/xsim.dir/xor_gate_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/GITDEMO/FPGA_Projects/GATES/GATES.sim/sim_1/behav/xsim/xsim.dir/design_1_wrapper_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/GITDEMO/FPGA_Projects/GATES/GATES.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/GITDEMO/FPGA_Projects/GATES/GATES.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/GITDEMO/FPGA_Projects/GATES/GATES.sim/sim_1/behav/xsim/xsim.dir/xor_gate_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Apr 17 15:31:36 2026...
+source C:/GITDEMO/FPGA_Projects/GATES/GATES.sim/sim_1/behav/xsim/xsim.dir/design_1_wrapper_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Apr 17 16:14:47 2026...

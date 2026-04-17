@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.ip_user_files/bd/design_1/ip/design_1_and_gate_0_0/sim/design_1_and_gate_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_and_gate_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.ip_user_files/bd/design_1/ip/design_1_nand_gate_0_0/sim/design_1_nand_gate_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_nand_gate_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.ip_user_files/bd/design_1/ip/design_1_nor_gate_0_0/sim/design_1_nor_gate_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_nor_gate_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.ip_user_files/bd/design_1/ip/design_1_not_gate_0_0/sim/design_1_not_gate_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_not_gate_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.ip_user_files/bd/design_1/ip/design_1_or_gate_0_0/sim/design_1_or_gate_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_or_gate_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.ip_user_files/bd/design_1/ip/design_1_xor_gate_0_0/sim/design_1_xor_gate_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xor_gate_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.ip_user_files/bd/design_1/ip/design_1_ila_0_0/sim/design_1_ila_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_ila_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GITDEMO/FPGA_Projects/GATES/GATES.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

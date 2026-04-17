@@ -1,8 +1,39 @@
 {
    ExpandedHierarchyInLayout: "",
+   PinnedBlocks: "/or_gate_0|/nor_gate_0|/xor_gate_0|/ila_0|/not_gate_0|/and_gate_0|/nand_gate_0|/clk_wiz_0|",
+   PinnedPorts: "sys_diff_clock|Y_xor_0|Y_not_0|A_0|Y_or_0|Y_nand_0|Y_and_0|B_0|Y_nor_0|",
    guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
 #  -string -flagsOSRD
-levelinfo -pg 1 0 10 -top 0 -bot 10
+preplace port Y_not_0 -pg 1 -y 610 -defaultsOSRD
+preplace port Y_xor_0 -pg 1 -y 510 -defaultsOSRD
+preplace port Y_nand_0 -pg 1 -y 190 -defaultsOSRD
+preplace port Y_nor_0 -pg 1 -y 310 -defaultsOSRD
+preplace port B_0 -pg 1 -y 80 -defaultsOSRD
+preplace port Y_and_0 -pg 1 -y 70 -defaultsOSRD
+preplace port Y_or_0 -pg 1 -y 420 -defaultsOSRD
+preplace port A_0 -pg 1 -y 60 -defaultsOSRD
+preplace port sys_diff_clock -pg 1 -y 800 -defaultsOSRD
+preplace inst or_gate_0 -pg 1 -lvl 1 -y 450 -defaultsOSRD
+preplace inst not_gate_0 -pg 1 -lvl 1 -y 700 -defaultsOSRD
+preplace inst nor_gate_0 -pg 1 -lvl 1 -y 310 -defaultsOSRD
+preplace inst nand_gate_0 -pg 1 -lvl 1 -y 190 -defaultsOSRD
+preplace inst and_gate_0 -pg 1 -lvl 1 -y 70 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 2 -y 820 -defaultsOSRD
+preplace inst xor_gate_0 -pg 1 -lvl 1 -y 590 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 800 -defaultsOSRD
+preplace netloc xor_gate_0_Y_xor 1 1 2 270 510 NJ
+preplace netloc nand_gate_0_Y_nand 1 1 2 250 190 NJ
+preplace netloc B_0_1 1 0 2 -10 860 240J
+preplace netloc or_gate_0_Y_or 1 1 2 260 420 NJ
+preplace netloc A_0_1 1 0 2 0 520 240J
+preplace netloc sys_diff_clock_1 1 0 1 NJ
+preplace netloc and_gate_0_Y_and 1 1 2 290 70 NJ
+preplace netloc clk_wiz_0_clk_out1 1 1 1 230J
+preplace netloc nor_gate_0_Y_nor 1 1 2 220 310 NJ
+preplace netloc not_gate_0_Y_not 1 1 2 280 610 NJ
+levelinfo -pg 1 -30 110 390 500 -top 0 -bot 960
 ",
 }
-
+{
+   da_board_cnt: "1",
+}

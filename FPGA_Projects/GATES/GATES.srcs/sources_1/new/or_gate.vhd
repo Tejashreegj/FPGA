@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity or_gate is
  Port ( A : in std_logic;
         B : in std_logic;
-        Y : out std_logic 
+        Y_or : out std_logic 
 );
 end or_gate;
 
@@ -46,6 +46,6 @@ signal operation : op_type;
 begin
 
 operation <= OR_OP;
-Y <= A or B;
+Y_or <= A or B;
 
 end Behavioral;

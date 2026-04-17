@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity not_gate is
 Port (
             A : in std_logic;
-            Y : out std_logic
+            Y_not : out std_logic
    );end not_gate;
 
 architecture Behavioral of not_gate is
@@ -45,6 +45,6 @@ signal operation : op_type;
 begin
 
 operation <= NOT_OP;
-Y <= not A;
+Y_not <= not A;
 
 end Behavioral;

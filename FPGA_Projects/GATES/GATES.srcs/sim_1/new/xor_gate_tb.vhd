@@ -41,7 +41,7 @@ type op_type is ( XOR_OP );
 signal operation : op_type;
 
 signal A_tb , B_tb : STD_LOGIC :='0';
-signal Y_tb : STD_LOGIC :='0';
+signal Y_xor_tb : STD_LOGIC :='0';
 
 begin
 
@@ -49,7 +49,7 @@ uut : entity work.xor_gate
 Port map (
             A => A_tb,
             B => B_tb,
-            Y => Y_tb
+            Y_xor => Y_xor_tb
 );
 
 process
@@ -63,8 +63,9 @@ A_tb <= '0'; B_tb <= '1'; wait for 10 ns;
 
 A_tb <= '1'; B_tb <= '0'; wait for 10 ns;
 
-A_tb <= '1'; B_tb <= '1'; wait;
+A_tb <= '1'; B_tb <= '1'; wait for 10 ns;
 
+A_tb <= 'X' ; B_tb <= 'X' ; wait;    --'X' unknown
 
 end process;
 end Behavioral;

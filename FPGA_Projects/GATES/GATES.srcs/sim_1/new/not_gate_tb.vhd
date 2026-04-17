@@ -43,13 +43,13 @@ signal operation : op_type;
  -- Component Declaration
 component not_gate is
    Port (  A : in std_logic;
-           Y : out std_logic
+           Y_not : out std_logic
    );
 end component not_gate;
 
 -- Signals
    signal A_tb : STD_LOGIC := '0';
-   signal Y_tb : STD_LOGIC;
+   signal Y_not_tb : STD_LOGIC;
    
 begin
 
@@ -57,7 +57,7 @@ begin
    uut: not_gate
        Port map (
            A => A_tb,
-           Y => Y_tb
+           Y_not => Y_not_tb
        );
        
 process
@@ -65,11 +65,12 @@ begin
 
 operation <= NOT_OP;
 
-A_tb <= '0'; 
-wait for 10 ns;
+A_tb <= '0'; wait for 10 ns;
  
-A_tb <= '1'; 
-wait;
+A_tb <= '1'; wait for 10 ns;
+
+A_tb <= 'X' ; wait;    --'X' unknown
+
 
 end process;
 end Behavioral;

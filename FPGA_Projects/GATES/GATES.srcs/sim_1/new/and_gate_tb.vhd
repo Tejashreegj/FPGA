@@ -44,14 +44,14 @@ signal operation : op_type;
 component and_gate is
     Port (  A : in std_logic;
             B : in std_logic;
-            Y : out std_logic
+            Y_and : out std_logic
     );
 end component and_gate;
 
 -- Signals
     signal A_tb : STD_LOGIC := '0';
     signal B_tb : STD_LOGIC := '0';
-    signal Y_tb : STD_LOGIC;
+    signal Y_and_tb : STD_LOGIC;
     
 begin
 
@@ -60,7 +60,7 @@ begin
         Port map (
             A => A_tb,
             B => B_tb,
-            Y => Y_tb
+            Y_and => Y_and_tb
         );
         
 process
@@ -74,7 +74,9 @@ A_tb <= '0';  B_tb <= '1'; wait for 10 ns;
   
 A_tb <= '1';  B_tb <= '0'; wait for 10 ns;
    
-A_tb <= '1';  B_tb <= '1'; wait;
+A_tb <= '1'; B_tb <= '1'; wait for 10 ns;
+
+A_tb <= 'X' ; B_tb <= 'X' ; wait;    --'X' unknown
 
 end process;
 end Behavioral;

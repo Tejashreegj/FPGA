@@ -35,7 +35,7 @@ entity nand_gate is
  Port (
            A : in std_logic;
            B : in std_logic;
-           Y : out std_logic
+           Y_nand : out std_logic
  );end nand_gate;
 
 architecture Behavioral of nand_gate is
@@ -46,6 +46,6 @@ signal operation : op_type;
 begin
 
 operation <= NAND_OP;
-Y <= A nand B;
+Y_nand <= A nand B;
 
 end Behavioral;

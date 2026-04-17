@@ -35,7 +35,7 @@ entity nor_gate is
   Port (
             A : in std_logic;
             B : in std_logic;
-            Y : out std_logic
+            Y_nor : out std_logic
    );
 end nor_gate;
 
@@ -47,6 +47,6 @@ signal operation : op_type;
 begin
 
 operation <= NOR_OP;
-Y <= A nor B;
+Y_nor <= A nor B;
 
 end Behavioral;

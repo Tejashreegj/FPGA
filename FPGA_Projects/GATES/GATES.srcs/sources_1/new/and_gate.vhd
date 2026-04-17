@@ -36,7 +36,7 @@ entity and_gate is
 --            clk : in std_logic; 
             A : in std_logic;
             B : in std_logic;
-            Y : out std_logic
+            Y_and : out std_logic
   );
 end and_gate;
 
@@ -48,6 +48,6 @@ signal operation : op_type;
 begin
 
 operation <= AND_OP;
-Y <= A and B;
+Y_and <= A and B;
 
 end Behavioral;
