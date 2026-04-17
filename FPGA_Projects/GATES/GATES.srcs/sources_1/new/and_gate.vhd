@@ -42,13 +42,12 @@ end and_gate;
 
 architecture Behavioral of and_gate is
 
-begin
---process(clk, A, B)
---process(A, B)
+type op_type is ( AND_OP );
+signal operation : op_type;
 
---begin
---if rising_edge(clk) then
-        Y <= A and B;
---end if;
---end process;
+begin
+
+operation <= AND_OP;
+Y <= A and B;
+
 end Behavioral;

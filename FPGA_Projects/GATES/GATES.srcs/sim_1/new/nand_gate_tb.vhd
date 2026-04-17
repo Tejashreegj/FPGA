@@ -36,6 +36,10 @@ entity nand_gate_tb is
 end nand_gate_tb;
 
 architecture Behavioral of nand_gate_tb is
+
+type op_type is ( NAND_OP );
+signal operation : op_type;
+
    -- Component Declaration
 component nand_gate is
  Port (  A : in std_logic;
@@ -62,21 +66,15 @@ begin
 process
 begin
 
-A_tb <= '0'; 
-B_tb <= '0';
-wait for 10 ns;
+operation <= NAND_OP;
 
-A_tb <= '0'; 
-B_tb <= '1';
-wait for 10 ns;
+A_tb <= '0'; B_tb <= '0'; wait for 10 ns;
 
-A_tb <= '1'; 
-B_tb <= '0';
-wait for 10 ns;
+A_tb <= '0';  B_tb <= '1'; wait for 10 ns;
 
-A_tb <= '1'; 
-B_tb <= '1';
-wait for 10 ns;
+A_tb <= '1';  B_tb <= '0'; wait for 10 ns;
+
+A_tb <= '1';  B_tb <= '1'; wait;
 
 end process;
 end Behavioral;

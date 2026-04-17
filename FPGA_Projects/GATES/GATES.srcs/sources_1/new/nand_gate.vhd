@@ -40,8 +40,12 @@ entity nand_gate is
 
 architecture Behavioral of nand_gate is
 
+type op_type is ( NAND_OP );
+signal operation : op_type;
+
 begin
 
+operation <= NAND_OP;
 Y <= A nand B;
 
 end Behavioral;

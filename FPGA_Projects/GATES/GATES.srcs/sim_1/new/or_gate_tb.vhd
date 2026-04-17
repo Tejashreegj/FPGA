@@ -37,6 +37,9 @@ end or_gate_tb;
 
 architecture Behavioral of or_gate_tb is
 
+type op_type is ( OR_OP );
+signal operation : op_type;
+
     -- Component Declaration
 component or_gate is
 Port (  A : in std_logic;
@@ -62,21 +65,15 @@ Port map (
 process
 begin
 
-A_tb <= '0'; 
-B_tb <= '0';
-wait for 10 ns;
+operation <= OR_OP;
+
+A_tb <= '0';  B_tb <= '0'; wait for 10 ns;
  
-A_tb <= '0'; 
-B_tb <= '1';
-wait for 10 ns;
+A_tb <= '0';  B_tb <= '1'; wait for 10 ns;
   
-A_tb <= '1'; 
-B_tb <= '0';
-wait for 10 ns;
+A_tb <= '1';  B_tb <= '0'; wait for 10 ns;
    
-A_tb <= '1'; 
-B_tb <= '1';
-wait for 10 ns;
+A_tb <= '1';  B_tb <= '1'; wait;
 
 end process;
 end Behavioral;

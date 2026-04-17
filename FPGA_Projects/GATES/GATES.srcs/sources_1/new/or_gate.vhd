@@ -40,7 +40,12 @@ end or_gate;
 
 architecture Behavioral of or_gate is
 
+type op_type is ( OR_OP );
+signal operation : op_type;
+
 begin
- Y <= A or B;
+
+operation <= OR_OP;
+Y <= A or B;
 
 end Behavioral;

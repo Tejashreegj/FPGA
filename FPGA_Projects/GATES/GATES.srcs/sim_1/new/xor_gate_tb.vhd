@@ -37,6 +37,9 @@ end xor_gate_tb;
 
 architecture Behavioral of xor_gate_tb is
 
+type op_type is ( XOR_OP );
+signal operation : op_type;
+
 signal A_tb , B_tb : STD_LOGIC :='0';
 signal Y_tb : STD_LOGIC :='0';
 
@@ -52,13 +55,15 @@ Port map (
 process
 begin
 
+operation <= XOR_OP;
+
 A_tb <= '0'; B_tb <= '0'; wait for 10 ns;
 
 A_tb <= '0'; B_tb <= '1'; wait for 10 ns;
 
 A_tb <= '1'; B_tb <= '0'; wait for 10 ns;
 
-A_tb <= '1'; B_tb <= '1'; wait for 10 ns;
+A_tb <= '1'; B_tb <= '1'; wait;
 
 
 end process;

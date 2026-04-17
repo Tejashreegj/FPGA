@@ -37,6 +37,9 @@ end and_gate_tb;
 
 architecture Behavioral of and_gate_tb is
 
+type op_type is ( AND_OP );
+signal operation : op_type;
+
     -- Component Declaration
 component and_gate is
     Port (  A : in std_logic;
@@ -63,21 +66,15 @@ begin
 process
 begin
 
-A_tb <= '0'; 
-B_tb <= '0';
-wait for 10 ns;
+operation <= AND_OP;
+
+A_tb <= '0';  B_tb <= '0'; wait for 10 ns;
  
-A_tb <= '0'; 
-B_tb <= '1';
-wait for 10 ns;
+A_tb <= '0';  B_tb <= '1'; wait for 10 ns;
   
-A_tb <= '1'; 
-B_tb <= '0';
-wait for 10 ns;
+A_tb <= '1';  B_tb <= '0'; wait for 10 ns;
    
-A_tb <= '1'; 
-B_tb <= '1';
-wait for 10 ns;
+A_tb <= '1';  B_tb <= '1'; wait;
 
 end process;
 end Behavioral;

@@ -41,8 +41,12 @@ end nor_gate;
 
 architecture Behavioral of nor_gate is
 
+type op_type is ( NOR_OP );
+signal operation : op_type;
+
 begin
 
+operation <= NOR_OP;
 Y <= A nor B;
 
 end Behavioral;

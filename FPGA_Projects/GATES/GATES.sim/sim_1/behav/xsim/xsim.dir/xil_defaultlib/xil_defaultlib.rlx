@@ -2,7 +2,16 @@
 2018.1
 Apr  4 2018
 19:30:32
-C:/Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/GATES/GATES.srcs/sim_1/new/nor_gate_tb.vhd,1775812152,vhdl,,,,nor_gate_tb,,,,,,,,
-C:/Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/GATES/GATES.srcs/sim_1/new/xor_gate_tb.vhd,1775812820,vhdl,,,,xor_gate_tb,,,,,,,,
-C:/Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/GATES/GATES.srcs/sources_1/new/nor_gate.vhd,1775811354,vhdl,C:/Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/GATES/GATES.srcs/sim_1/new/nor_gate_tb.vhd,,,nor_gate,,,,,,,,
-C:/Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/GATES/GATES.srcs/sources_1/new/xor_gate.vhd,1775812363,vhdl,C:/Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/GATES/GATES.srcs/sim_1/new/xor_gate_tb.vhd,,,xor_gate,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/and_gate_tb.vhd,1776417892,vhdl,,,,and_gate_tb,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/logic_gates_tb.vhd,1776419461,vhdl,,,,logic_gates_tb,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/nand_gate_tb.vhd,1776417923,vhdl,,,,nand_gate_tb,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/nor_gate_tb.vhd,1776417849,vhdl,,,,nor_gate_tb,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/not_gate_tb.vhd,1776417498,vhdl,,,,not_gate_tb,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/or_gate_tb.vhd,1776418027,vhdl,,,,or_gate_tb,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/xor_gate_tb.vhd,1776418132,vhdl,,,,xor_gate_tb,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sources_1/new/and_gate.vhd,1776417590,vhdl,C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/logic_gates_tb.vhd,,,and_gate,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sources_1/new/nand_gate.vhd,1776417720,vhdl,C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/logic_gates_tb.vhd,,,nand_gate,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sources_1/new/nor_gate.vhd,1776417793,vhdl,C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/nor_gate_tb.vhd,,,nor_gate,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sources_1/new/not_gate.vhd,1776417528,vhdl,C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/logic_gates_tb.vhd,,,not_gate,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sources_1/new/or_gate.vhd,1776417972,vhdl,C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/logic_gates_tb.vhd,,,or_gate,,,,,,,,
+C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sources_1/new/xor_gate.vhd,1776418059,vhdl,C:/GITDEMO/FPGA_Projects/GATES/GATES.srcs/sim_1/new/xor_gate_tb.vhd,,,xor_gate,,,,,,,,

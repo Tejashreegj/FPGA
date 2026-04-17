@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="36" Path="C:/Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/GATES/GATES.xpr">
+<Project Version="7" Minor="36" Path="C:/GITDEMO/FPGA_Projects/GATES/GATES.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="8066edfd6025444e9a763a007254c3c6"/>
@@ -32,7 +32,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="zc706"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="25"/>
+    <Option Name="WTXSimLaunchSim" Val="38"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -58,7 +58,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/new/and_gate.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AND_gate/AND_gate.srcs/sources_1/new/and_gate.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/AND_gate/AND_gate.srcs/sources_1/new/and_gate.vhd"/>
           <Attr Name="ImportTime" Val="1775469443"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -67,7 +67,7 @@
       <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AND_gate/AND_gate.srcs/sources_1/bd/design_1/design_1.bd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/AND_gate/AND_gate.srcs/sources_1/bd/design_1/design_1.bd"/>
           <Attr Name="ImportTime" Val="1775467440"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -102,6 +102,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/not_gate.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="and_gate"/>
@@ -122,6 +129,20 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sim_1/new/or_gate_tb.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/new/not_gate_tb.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/new/nor_gate_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -136,14 +157,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/or_gate_tb.vhd">
+      <File Path="$PSRCDIR/sim_1/new/and_gate_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/and_gate_tb.vhd">
+      <File Path="$PSRCDIR/sim_1/new/logic_gates_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

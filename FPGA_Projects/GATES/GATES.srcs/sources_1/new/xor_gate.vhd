@@ -40,8 +40,12 @@ end xor_gate;
 
 architecture Behavioral of xor_gate is
 
+type op_type is ( XOR_OP );
+signal operation : op_type;
+
 begin
 
+operation <= XOR_OP;
 Y <= A xor B;
 
 end Behavioral;
