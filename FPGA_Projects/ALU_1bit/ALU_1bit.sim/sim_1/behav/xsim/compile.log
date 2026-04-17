@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/ALU_1bit/ALU_1bit.srcs/sources_1/new/logics_op.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity logics_op
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tejashree jadhav/OneDrive/Desktop/FPGA_project/ALU_1bit/ALU_1bit.srcs/sim_1/new/logics_op_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity logics_op_tb
